@@ -3,9 +3,17 @@
 
 
 # Use words.txt as the file name
-fname = input("Enter file name: ")
-fh = open(fname,'r')
+# fname = input("Enter file name: ")
+# fh = open(fname,'r')
+# for line in fh:
+#     line=line.upper()
+#     line=line.strip()
+#     print(line)
+
+
+fh=open('words.txt')
+print(fh)
+ 
 for line in fh:
-    line=line.upper()
-    line=line.strip()
-    print(line)
+  line=line.rstrip()
+  print(line.upper())
