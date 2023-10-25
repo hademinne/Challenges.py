@@ -1,9 +1,7 @@
-
 # mylist =list()
 # mylist.append('book')
 # mylist.append(100)
 # print(mylist)
-
 
 
 # me = 'Hademinne';
@@ -16,7 +14,6 @@
 # print(me1[3:7])
 # # for letter in me1:
 # #   print('letter: ', letter)
-
 
 
 # t = [1,5,6,7,9,0]
@@ -41,7 +38,41 @@
 
 # print(pieces[0])
 
-a = [1, 2, 3]
-b = [4, 5, 6]
-c = a + b
-print(len(c))
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# c = a + b
+# print(len(c))
+
+# mydic = dict()
+# mydic["hadminne"] = "officer"
+# print(mydic)
+
+
+counts = dict()
+names = {"valla", "nana", "nana", "nevisa", "nana"}
+# for name in names:
+#     if name not in counts:
+#         counts[name] = 1
+
+#     else:
+#         counts[name] = counts[name] + 1
+
+print(counts.keys())
+
+
+# # counting pattern:
+# counts = dict()
+# print("enter a line or text:")
+# line = input("")
+
+# words = line.split()
+# print("words:", words)
+
+# print("counting...")
+# for word in words:
+#     counts[word] = counts.get(word, 0) + 1
+# print("counts", counts)
+
+
+stuff = dict()
+print(stuff.get("candy", -1))
