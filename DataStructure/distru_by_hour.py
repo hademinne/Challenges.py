@@ -22,8 +22,10 @@ counts = dict()
 for lines in fh:
     if lines.startswith("From "):
         words = lines.split()
-        time = words[-2]
+        time = words[5]
         hour = time[:2]
         counts[hour] = counts.get(hour, 0) + 1
+        # print(hour)
+print(counts)
 for hour, count in sorted(counts.items()):
-    print(f"{hour} {count}")
+    print(hour, count)
