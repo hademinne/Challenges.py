@@ -23,7 +23,7 @@ hf = open("words.txt")
 counts = 0
 for line in hf:
     word = line.split()
-    counts += 1
+    counts += len(word)
 print(counts)
 
 
