@@ -110,12 +110,12 @@ print(counts.keys())
 # /////////////////
 # Overall, the code reads a file, counts the occurrences of each word, stores the results in a list of tuples, sorts the list in descending order by count, and then prints the top 10 most frequent words along with their counts.
 
-fhand = open("romeo.txt")
-counts = dict()
-for line in fhand:
-    words = line.split()
-    for word in words:
-        counts[word] = counts.get(word, 0) + 1
+# fhand = open("romeo.txt")
+# counts = dict()
+# for line in fhand:
+#     words = line.split()
+#     for word in words:
+#         counts[word] = counts.get(word, 0) + 1
 # lst = list()
 # for key, val in counts.items():
 #     newtup = (val, key)
@@ -127,3 +127,15 @@ for line in fhand:
 #     print(key, val)
 
 # //////////////////
+# Matching and Extracting Data
+import re
+
+# x = "My 2 favorite numbers are 12 and 20"
+# y = re.findall("[0-9]+", x)
+# print(y)
+
+x = "From: Using the : character"
+y = re.findall("^F.+:", x)
+print(y)
+
+# //////////////////////
