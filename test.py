@@ -128,14 +128,31 @@ print(counts.keys())
 
 # //////////////////
 # Matching and Extracting Data
-import re
+# import re
 
 # x = "My 2 favorite numbers are 12 and 20"
 # y = re.findall("[0-9]+", x)
 # print(y)
 
-x = "From: Using the : character"
-y = re.findall("^F.+:", x)
-print(y)
+# x = "From: Using the : character"
+# y = re.findall("^F.+:", x)
+# print(y)
 
 # //////////////////////
+# week 5  JavaScript Object Notation (JSON)
+import json
+
+input_data = """[
+    {"id": "001", "x": "2", "name": "hademinne"},
+    {"id": "009", "x": "7", "name": "hademinne"}
+]"""
+
+# Remove newline characters from the string
+input_data = input_data.replace("\n", "")
+
+info = json.loads(input_data)
+print("User count:", len(info))
+for item in info:
+    print("Name:", item["name"])
+    print("Id:", item["id"])
+    print("Attribute:", item["x"])
