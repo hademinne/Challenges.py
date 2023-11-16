@@ -140,19 +140,37 @@ print(counts.keys())
 
 # //////////////////////
 # week 5  JavaScript Object Notation (JSON)
+# import json
+
+# input_data = """[
+#     {"id": "001", "x": "2", "name": "hademinne"},
+#     {"id": "009", "x": "7", "name": "hademinne"}
+# ]"""
+
+# # Remove newline characters from the string
+# input_data = input_data.replace("\n", "")
+
+# info = json.loads(input_data)
+# print("User count:", len(info))
+# for item in info:
+#     print("Name:", item["name"])
+#     print("Id:", item["id"])
+#     print("Attribute:", item["x"])
+
+# Worked Example: JSON
 import json
 
-input_data = """[
-    {"id": "001", "x": "2", "name": "hademinne"},
-    {"id": "009", "x": "7", "name": "hademinne"}
-]"""
+data = {
+    "name": "hademinne",
+    "phone": {"type": "intl", "number": "222 46800582"},
+    "email": {"hide": "yes"},
+}
 
-# Remove newline characters from the string
-input_data = input_data.replace("\n", "")
+# Convert the Python dictionary to a JSON-formatted string
+json_data = json.dumps(data)
 
-info = json.loads(input_data)
-print("User count:", len(info))
-for item in info:
-    print("Name:", item["name"])
-    print("Id:", item["id"])
-    print("Attribute:", item["x"])
+# Load the JSON-formatted string
+info = json.loads(json_data)
+
+# Now you can access the values in the loaded JSON object
+print("name:", info["name"])
